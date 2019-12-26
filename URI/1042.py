@@ -1,16 +1,38 @@
-def sortem(numbers):
-    for i in range(len(numbers)-1, 0, -1):
-        for j in range(i):
-            if numbers[j] > numbers[j+1]:
-                temp = numbers[j]
-                numbers[j] = numbers[j+1]
-                numbers[j+1] = temp
+x = input().split()
+a, b, c = x
+a = int(a)
+b = int(b)
+c = int(c)
 
 
-numbers = []
-for t in range(3):
-    numb = int(input())
-    numbers.append(numb)
-
-sortem(numbers)
-print(numbers)
+if a > b and a > c:
+    d = a
+    if b > c:
+        e = b
+        f = c
+    else:
+        e = c
+        f = b
+if b > a and b > c:
+    d = b
+    if a > c:
+        e = a
+        f = c
+    else:
+        e = c
+        f = a
+if c > a and c > b:
+    d = c
+    if a > b:
+        e = a
+        f = b
+    else:
+        f = a
+        e = b
+print(f)
+print(e)
+print(d)
+print()
+print(a)
+print(b)
+print(c)
